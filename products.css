@@ -1,0 +1,194 @@
+.productPageNavigation {
+    margin-top: 120px;
+    color: black;
+    font-size: 20px;
+    margin-left: 50px;
+}
+
+
+
+.navProductPageContent{
+    cursor: pointer;    
+}
+
+
+.navProductPageContentChild{
+    color: rgb(130, 128, 128);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navProductPageContentChild:hover{
+    color: black;  
+}
+
+
+
+.displayImagesGrid{
+    margin: 20px 10px 10px 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    row-gap: 50px;
+}
+
+
+.imgContainer{
+    box-shadow: 5px 10px 18px black ;
+    border-radius: 10px;
+    opacity: 1;
+    transition: opacity 0.15s;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    
+}
+
+
+.displayImages{
+    width: 90%;
+    height: 200px;
+    object-fit: contain;
+    margin-top: 20px;
+    cursor: pointer;
+    vertical-align: top;
+    margin-left: 5%;
+}
+
+
+.imageDetails{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.actionButtons{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.addToCart{
+    background: black;
+    color: white;
+    padding: 10px 10px 10px 10px;
+    border-radius: 30px;
+
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.05s ease, color 0.05s ease;
+}
+
+.addToCart:active{
+    background:white;
+    color: black;
+    border: 2px solid black;
+}
+.addToCartQuantity{
+    width: 20%;
+    text-align: center;
+}
+.addToCartControllers{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.addToCartControllers:hover{
+    opacity: 0.5;
+}
+
+.addToCartControllers:active{
+    opacity: 0.2;
+}
+
+@media screen and (max-width: 1080px){
+    .displayImagesGrid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .displayImagesGrid{
+        grid-template-columns: 1fr;
+    }
+}
+
+.checkoutPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 50%;
+    max-height: 33%;
+    overflow: auto;
+    z-index: 9999;
+}
+
+.popupImageContainer {
+    float: left;
+    margin-right: 20px;
+}
+
+.popupProductImage {
+    max-width: 100px; 
+    max-height: 100px; 
+    border-radius: 5px;
+}
+
+.popupDetailsContainer {
+    float: left;
+}
+
+.popupRow {
+    margin-bottom: 10px;
+}
+
+.popupLabel {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.popupValue {
+    color: #333;
+}
+
+.popupButtons{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 10px;
+}
+
+.aboveButtons{
+    display:inline-block;
+}
+
+.proceedButton, .closeButton{
+    padding: 10px;
+    background: black;
+    color: white;
+    border-radius: 60px;
+    cursor: pointer; 
+    
+    font-weight: bold;
+}
+
+.proceedButton:active, .closeButton:active{
+    background: white;
+    color: black;
+}
+
+.toBeBlurred.active{
+    background-color: rgba(255, 255, 255, 0.7); 
+    filter: blur(5px);
+    pointer-events:none;
+    user-select: none;
+}

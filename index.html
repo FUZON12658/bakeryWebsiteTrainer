@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWEETZ</title>
+    
+    <link rel="icon" type="image/png" href="Images/bakery.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  
+</head>
+<body>
+    <div class="master_wrapper">
+        <header>
+            <div class="master_wrapper">
+                <div class="desktop_navigation">
+                    <div class="company_logo"><a href="index.html">SWEETZ.</a></div>
+                    <nav>   
+                        
+        
+                        <ul>
+                            <li>
+                               <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="products.html">Products</a>
+                            </li>
+                        </ul>
+                    
+                    </nav>
+                </div>
+                <div class="mobile_nav">
+                    <div class="menu_icon"><img src="Images/menu_icon.webp" alt=""></div>
+                    
+                    <div class="mobile_menu_container">
+                        <div class="close_icon"><img src="Images/close_icon.webp" alt=""></div>
+                        <ul>
+                            <li>
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="products.html">Products</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <py-script>
+                from js import document, console
+                from pyodide.ffi.wrappers import add_event_listener
+                
+                # Get the DOM elements
+                menuIcon = document.querySelector(".menu_icon")
+                closeIcon = document.querySelector(".close_icon")
+                mobileMenuContainer = document.querySelector(".mobile_menu_container")
+            
+                # Define Python functions
+                def menu_icon_click(event):
+                    mobileMenuContainer.classList.add("active")
+                    closeIcon.classList.add("active")
+            
+                def close_icon_click(event):
+                    mobileMenuContainer.classList.remove("active")
+                    closeIcon.classList.remove("active")
+            
+                # Attach Python functions to JavaScript event listeners
+                add_event_listener(menuIcon, "click", menu_icon_click)
+                add_event_listener(closeIcon, "click", close_icon_click)
+            </py-script>
+        </header>
+
+        <main>
+                <div class="herosection">
+                    <div class="background_for_herosection">
+                        
+                        <p class="BigIconHerosection">SWEETZ</p>
+                        <div class="buttons">
+                            <a href="tel:9846754321"><button class="for-herosection b1">Call Now</button></a>
+                            <a href="https://maps.app.goo.gl/8pWCkUtv3un5q45w9" target="_blank"><button class="for-herosection b2">Find Us</button></a>
+                        </div>
+                        <img class="heroSectionImage" src="Images/heroSectionBackground.jpg" alt="">   
+                    </div>
+                </div>
+                <div class="about_us">
+                    <div class="top">About Us</div>
+                    <div class="body">
+                    <div class="left"> <img src="Images/bakery.png" alt=""></div>
+                    <div class="right">
+                        <br><br><br>Indulge your senses at SWEETZ where we craft freshness into every bite. Our artisanal bakery takes pride in using the finest ingredients, creating a symphony of flavors. From flaky pastries to decadent treats, savor the essence of our passion in every delightful creation.
+                        <br><br><br>
+                        Step into SWEETZ—a cozy retreat where the aroma of fresh baking welcomes you. Our skilled bakers artfully create each treat with precision, ensuring a burst of flavor in every bite. Experience the joy of authenticity as you delight in our range of delectable pastries and baked goods.</div>
+                    </div>
+                </div>                        
+        </main>
+
+        <div class="master_wrapper">
+            <footer>
+                <div class="bottom_rectangle">
+                    <div class="headings">
+                        <div class="Quick_Links"><h1>Links</h1>
+                            <ul>
+                                <li>
+                                    <a href="index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="products.html">Products</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="address"><h1>Address</h1>
+                            <div class="address_footer">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28268.78649608867!2d85.27376395!3d27.667897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1812d78377ef%3A0x8c37cded908543b!2sKirtipur%2044600!5e0!3m2!1sen!2snp!4v1698510563021!5m2!1sen!2snp" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <div class="address_footer_for_mobile">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28268.78649608867!2d85.27376395!3d27.667897!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1812d78377ef%3A0x8c37cded908543b!2sKirtipur%2044600!5e0!3m2!1sen!2snp!4v1698510563021!5m2!1sen!2snp" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+
+                        <div class="call_to_action"> <h1>Contacts</h1><br>
+                            <a href="tel:9846754321"><button class="for-footer">Call Now</button></a>
+                            <a href="mailto:sweetzBakery@gmail.com"><button class="for-footer">Email Now</button></a><br>
+                            <a href="https://maps.app.goo.gl/8pWCkUtv3un5q45w9" target="_blank"><button class="for-find-us-footer for-footer">Find Us</button></a>
+                            <a class="icons" href="https://www.facebook.com" target="_blank"><img src="Images/facebook.svg" alt=""></a>
+                            <a class="icons" href="https://www.instagram.com" target="_blank"><img src="Images/instagram.svg" alt=""></a>
+                        </div>
+
+                        <div class="call_to_action_for_mobile"> 
+                            <div class="top"><h1>Contacts</h1></div>
+                            <div class="call_to_action_body">
+                                <a href="tel:9846754321"><button class="for-footer">Call Now</button></a>
+                                <a href="mailto:sweetzBakery@gmail.com"><button class="for-footer">Email Now</button></a>
+                                <a href="https://maps.app.goo.gl/8pWCkUtv3un5q45w9" target="_blank"><button class="for-find-us-footer for-footer">Find Us</button></a>
+                                <button class="for-footer">Facebook</button>
+                                <button class="for-footer">Instagram</button>
+                            </div>
+                        </div>
+                    </div>   
+                </div>           
+            </footer>
+        </div>
+        
+  </div>
+</body>
+</html>
+
+
+
+
+
